@@ -1,11 +1,14 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass tufte-book
+\textclass tufte-book-biblatex
 \begin_preamble
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
 \usepackage{titlesec}
 \usepackage{graphicx}
 \usepackage{afterpage}
@@ -28,12 +31,14 @@
 \setlength{\parsep}{\parskip}%
 }%
 \item[]}{\end{list}}
-\setcounter{secnumdepth}{2}
 
 
 \geometry{bindingoffset=0.9cm}
+
+\usepackage{xpatch}
+\AtBeginDocument{\xapptobibmacro{cite}{\setunit{\nametitledelim}\printfield{year}}{}{}}
 \end_preamble
-\options nohyper,twoside,symmetric
+\options twoside,symmetric,nobib,notoc,justified,a4paper
 \use_default_options false
 \maintain_unincluded_children false
 \language english
@@ -50,6 +55,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -70,15 +77,19 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine biblatex
+\cite_engine_type authoryear
 \biblio_style plain
+\biblio_options maxbibnames=99,maxcitenames=1,hyperref=true
+\biblatex_bibstyle verbose-inote
+\biblatex_citestyle authortitle
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -87,7 +98,10 @@
 \tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -101,8 +115,6 @@
 \begin_body
 
 \begin_layout Standard
-
-\lang australian
 \begin_inset ERT
 status open
 
@@ -138,8 +150,6 @@ newgeometry{left=2.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm,footnotesep=0.5cm}
 \end_layout
 
 \begin_layout Standard
-
-\lang australian
 \begin_inset CommandInset include
 LatexCommand include
 filename "titlepage.tex"
@@ -150,8 +160,6 @@ filename "titlepage.tex"
 \end_layout
 
 \begin_layout Standard
-
-\lang australian
 \begin_inset ERT
 status open
 
@@ -199,8 +207,6 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-
-\lang australian
 \begin_inset FloatList figure
 
 \end_inset
@@ -209,8 +215,33 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset FloatList margintable
 
-\lang australian
+\end_inset
+
+
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MFPT"
+description "Mean First Passage Time"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -226,7 +257,80 @@ mainmatter
 
 \end_layout
 
+\begin_layout Chapter
+Introduction
+\end_layout
+
 \begin_layout Standard
+this is how you use citations 
+\begin_inset CommandInset citation
+LatexCommand footcite
+key "eigen_molecular_1988,Ross2009578"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{left=2cm,right=1.5cm,top=2.5cm,bottom=2.5cm,footnotesep=0.5cm} %
+ material for this page 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+restoregeometry
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \begin_inset CommandInset include
 LatexCommand include
 filename "01_chap/01_chap.lyx"
@@ -234,9 +338,171 @@ filename "01_chap/01_chap.lyx"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{left=2cm,right=1.5cm,top=2.5cm,bottom=2.5cm,footnotesep=0.5cm} %
+ material for this page 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Applications
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+restoregeometry
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "02_chap/02_chap.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{left=2cm,right=1.5cm,top=2.5cm,bottom=2.5cm,footnotesep=0.5cm} %
+ material for this page 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Appendices
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+clearpage 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+restoregeometry
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "appendices/app_1.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "appendices/app_2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "thesis_bibliography"
+options "bibtotoc"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "acknowledgment/acknowledgment.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "selbststaendigkeit.lyx"
 
 \end_inset
 

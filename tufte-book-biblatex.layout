@@ -1,0 +1,272 @@
+#% Do not delete the line below; configure depends on this
+#  \DeclareLaTeXClass[tufte-book,changepage.sty,fancyhdr.sty,hardwrap.sty,ifmtarg.sty,ifplatform.sty,letterspace.sty,multicol.sty,biblatex.sty,optparams.sty,paralist.sty,placeins.sty,ragged2e.sty,setspace.sty,textcase.sty,titlesec.sty,titletoc.sty,xcolor.sty,xifthen.sty,xkeyval.sty]{Tufte Book (biblatex)}
+#  \DeclareCategory{Books}
+# tufte-book textclass definition file using a biblatex bibliography.
+# Jason Waskiewicz <jason.waskiewicz@sendit.nodak.edu>, 2009/10/18
+# Modified by Uwe Stöhr <uwestoehr@web.de>, 2009/11/15
+# Modified by Benjamin F. Maier <benjaminfrankmaier@gmail.com>, 2018/11/05
+
+Format 66
+
+Provides geometry 1
+Provides biblatex-internal 1
+
+Sides		2
+PageStyle	Headings
+
+ClassOptions
+	Other		nohyper
+end
+
+Style Standard
+	Margin		Static
+	LatexType	Paragraph
+	LatexName	dummy
+	ParIndent	MM
+	ParSkip		0.4
+	Align		Block
+	AlignPossible	Block, Left, Right, Center
+	LabelType	No_Label
+End
+
+# import other layouts
+Input stdlayouts.inc
+Input stdclass.inc
+
+Style Title
+	InPreamble		1
+	NeedProtect		1
+End
+
+Style Author
+	InPreamble		1
+	NeedProtect		1
+End
+
+Style Date
+	InPreamble		1
+	NeedProtect		1
+End
+
+NoStyle Abstract
+NoStyle Chapter
+NoCounter chapter
+NoStyle Section
+NoStyle Subsection
+NoCounter subsection
+NoStyle Subsubsection
+NoCounter subsubsection
+NoStyle Subsubsection*
+NoStyle Paragraph
+NoCounter paragraph
+NoStyle Paragraph*
+NoStyle Subparagraph
+NoCounter subparagraph
+NoStyle Subparagraph*
+
+Style Chapter
+	Margin			Static
+	Category		Sectioning
+	LabelType		No_Label
+	LabelCounter	chapter
+	TocLevel		0
+	LatexType		Command
+	LatexName		chapter
+	NeedProtect		1
+	NextNoIndent	1
+	ParSkip			0.4
+	TopSep			2
+	BottomSep		0.8
+	ParSep			0.8
+	Align			Block
+	RefPrefix		chap
+	Argument 1
+	  LabelString	"Short Title|S"
+	  Tooltip	"The chapter as it appears in the table of contents/running headers"
+	  InsertCotext	1
+	  IsTocCaption  1
+	EndArgument
+	Font
+	  Series		Bold
+	  Size			Huge
+	EndFont
+End
+
+Style Section
+	Category		Sectioning
+	Margin			Dynamic
+	LabelType		No_Label
+	LabelCounter	section
+	TocLevel		1
+	LatexType		Command
+	LatexName		section
+	NeedProtect		1
+	NextNoIndent	1
+	LabelSep		xxx
+	ParSkip			0.4
+	TopSep			1.3
+	BottomSep		0.7
+	ParSep			0.7
+	Align			Block
+	RefPrefix		sec
+	Argument 1
+	  LabelString	"Short Title|S"
+	  Tooltip	"The section as it appears in the table of contents/running headers"
+	  InsertCotext	1
+	  IsTocCaption  1
+	EndArgument
+	Font
+	  Series		Bold
+	  Size			Larger
+	EndFont
+End
+
+Style Subsection
+	CopyStyle		Section
+	TocLevel		2
+	LatexName		subsection
+	TopSep			0.9
+	BottomSep		0.5
+	ParSep			0.5
+	RefPrefix		subsec
+	Font
+	  Series		Bold
+	  Size			Large
+	EndFont
+End
+
+InsetLayout Flex:Sidenote
+	LyxType			custom
+	LatexType		command
+	LatexName		sidenote
+	Decoration		classic
+	LabelString		"sidenote"
+	Font
+	  Color			foreground
+	  Size			Small
+	  Misc			No_Emph
+	  Misc			No_Noun
+	  Misc			No_Bar
+	EndFont
+	LabelFont
+	  Color			marginlabel
+	  Size			Small
+	EndFont
+	ResetsFont		true
+End
+
+InsetLayout Flex:Marginnote
+	CopyStyle		Flex:Sidenote
+	LatexName		marginnote
+	Decoration		classic
+	LabelString		"marginnote"
+	Font
+	  Family		Roman
+	  Shape			Up
+	  Series		Medium
+	EndFont
+	MultiPar		true
+End
+
+InsetLayout Flex:NewThought
+	LyXType			charstyle
+	LatexType		Command
+	LatexName		newthought
+	LabelString		"new thought"
+	Font
+	  Shape			SmallCaps
+	EndFont
+	LabelFont
+	  Family		Roman
+	  Color			red
+	EndFont
+	ResetsFont		true
+End
+
+InsetLayout Flex:AllCaps
+	CopyStyle		Flex:NewThought
+	LatexName		allcaps
+	LabelString		"allcaps"
+	Font
+	  Shape			Up
+	  Misc			Noun
+	EndFont
+	LabelFont
+	  Color			blue
+	EndFont
+End
+
+InsetLayout Flex:SmallCaps
+	CopyStyle		Flex:NewThought
+	LatexName		smallcaps
+	LabelString		"smallcaps"
+	LabelFont
+	  Color			green
+	EndFont
+End
+
+Style Full_Width
+	Margin			Static
+	LaTeXType		environment
+	LaTeXName		fullwidth
+	Category		MainText
+	NextNoIndent	1
+	ParSkip			0
+	ItemSep			0
+	TopSep			0.5
+	BottomSep		0.5
+	ParSep			0
+	Align			Block
+	AlignPossible	Block, Left, Right, Center
+	LabelType		No_Label
+End
+
+# this steps the counters
+Counter		marginfigure
+End
+
+Counter		margintable
+End
+
+# define the floats
+Float
+	Type			margintable
+	GuiName			MarginTable
+	Placement		tbp
+	AllowedPlacement none
+	AllowsSideways	0
+	AllowsWide		0
+	Extension		lot
+	NumberWithin	none
+	Style			plain
+	ListName		"List of Tables"
+	ListCommand		listoftables
+	IsPredefined	true
+	UsesFloatPkg	false
+End
+
+Float
+	Type			marginfigure
+	GuiName			MarginFigure
+	Placement		tbp
+	AllowedPlacement none
+	AllowsSideways	0
+	AllowsWide		0
+	Extension		lof
+	NumberWithin	none
+	Style			plain
+	ListName		"List of Figures"
+	ListCommand		listoffigures
+	IsPredefined	true
+	UsesFloatPkg	false
+End
+
+Style Bibliography
+	TopSep			4
+	LabelString		"Bibliography"
+	LabelFont
+	  Series		Bold
+	  Size			Huge
+	EndFont
+	TocLevel                0
+End
