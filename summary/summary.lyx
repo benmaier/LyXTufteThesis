@@ -78,14 +78,14 @@
 
 \begin_body
 
-\begin_layout Chapter*
-Zusammenfassung
+\begin_layout Chapter
+Summary & Outlook
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "chap:Zusammenfassung"
+name "chap:summary"
 
 \end_inset
 
@@ -93,10 +93,7 @@ name "chap:Zusammenfassung"
 \end_layout
 
 \begin_layout Standard
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
- eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
- voluptua.
- At vero eos et accusam et justo duo dolores et ea rebum.
+At vero eos et accusam et justo duo dolores et ea rebum.
  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
  sit amet.
  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -105,82 +102,12 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
  At vero eos et accusam et justo duo dolores et ea rebum.
  Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
  sit amet.
- Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
- eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
- voluptua.
- At vero eos et accusam et justo duo dolores et ea rebum.
- Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
- sit amet.
- 
-\end_layout
-
-\begin_layout Subsection*
-Schlagw
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\begin_inset Quotes erd
-\end_inset
-
-o
-\end_layout
-
-\end_inset
-
-rter
-\end_layout
-
-\begin_layout Standard
-Schlagwort1, Schlagwort 2
-\end_layout
-
-\begin_layout Chapter*
-Abstract
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "chap:abstract"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
- eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
- voluptua.
- At vero eos et accusam et justo duo dolores et ea rebum.
- Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
- sit amet.
- Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
- eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
- voluptua.
- At vero eos et accusam et justo duo dolores et ea rebum.
- Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
- sit amet.
- Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
- eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
- voluptua.
- At vero eos et accusam et justo duo dolores et ea rebum.
- Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
- sit amet.
- 
-\end_layout
-
-\begin_layout Subsection*
-Keywords
-\end_layout
-
-\begin_layout Standard
-Keyword1, Keyword2
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam
+ diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et
+ invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum.
+ sanctus sea sed takimata ut vero voluptua.
+ est Lorem ipsum dolor sit amet.
+ Lorem ipsum dolor sit amet, consetetur
 \end_layout
 
 \end_body

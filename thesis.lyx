@@ -257,20 +257,14 @@ mainmatter
 
 \end_layout
 
-\begin_layout Chapter
-Introduction
-\end_layout
-
 \begin_layout Standard
-this is how you use citations 
-\begin_inset CommandInset citation
-LatexCommand footcite
-key "eigen_molecular_1988,Ross2009578"
-literal "false"
+\begin_inset CommandInset include
+LatexCommand include
+filename "introduction/introduction.lyx"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -302,7 +296,7 @@ newgeometry{left=2cm,right=1.5cm,top=2.5cm,bottom=2.5cm,footnotesep=0.5cm} %
 \end_layout
 
 \begin_layout Part
-Theory
+Theory & Data
 \end_layout
 
 \begin_layout Standard
@@ -365,7 +359,7 @@ newgeometry{left=2cm,right=1.5cm,top=2.5cm,bottom=2.5cm,footnotesep=0.5cm} %
 \end_layout
 
 \begin_layout Part
-Applications
+Results
 \end_layout
 
 \begin_layout Standard
@@ -400,6 +394,13 @@ restoregeometry
 \begin_inset CommandInset include
 LatexCommand include
 filename "02_chap/02_chap.lyx"
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "summary/summary.lyx"
 
 \end_inset
 
