@@ -404,7 +404,19 @@ filename "summary/summary.lyx"
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "thesis_bibliography"
+options "bibtotoc"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -472,18 +484,6 @@ filename "appendices/app_1.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "appendices/app_2.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintCited"
-bibfiles "thesis_bibliography"
-options "bibtotoc"
 
 \end_inset
 
