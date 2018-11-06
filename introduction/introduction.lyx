@@ -6,7 +6,7 @@
 \origin unavailable
 \textclass tufte-book-biblatex
 \use_default_options true
-\master ../main.lyx
+\master ../thesis.lyx
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -44,9 +44,11 @@
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine biblatex
+\cite_engine_type authoryear
 \biblio_style plain
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -92,7 +94,7 @@ name "chap:introduction"
 this is how you use citations 
 \begin_inset CommandInset citation
 LatexCommand footcite
-key "eigen_molecular_1988,Ross2009578"
+key "Ross2009578,eigen_molecular_1988"
 literal "false"
 
 \end_inset

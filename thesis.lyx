@@ -81,7 +81,7 @@
 \cite_engine_type authoryear
 \biblio_style plain
 \biblio_options maxbibnames=99,maxcitenames=1,hyperref=true
-\biblatex_bibstyle verbose-inote
+\biblatex_bibstyle authoryear
 \biblatex_citestyle authortitle
 \use_bibtopic false
 \use_indices false
@@ -404,7 +404,7 @@ filename "summary/summary.lyx"
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
