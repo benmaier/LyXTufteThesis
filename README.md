@@ -73,3 +73,9 @@ make sure you clear fields without linebreaks in between because it will change 
 ### LyX layout files
 * https://tex.stackexchange.com/questions/236332/installing-new-lyx-layout-where-are-my-layout-files
 * http://blog.anidear.com/2011/03/lyx-convert-latex-cls-file-to-layout-in.html
+
+### Figure placement problems
+* https://tex.stackexchange.com/questions/37726/problem-with-captions-at-top-of-page-for-tufte-latex
+
+### Protected references are necessary
+* https://tex.stackexchange.com/questions/191043/error-using-ref-in-captions-with-tufte-and-babel
