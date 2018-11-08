@@ -83,3 +83,7 @@ make sure you clear fields without linebreaks in between because it will change 
 
 ### Margin figures have to be adjusted manually
 * https://groups.google.com/forum/#!topic/tufte-latex/s5ySzb9fF50
+
+### Figures with Sans-Serif fonts
+* ftp://ftp.mpi-sb.mpg.de/pub/tex/mirror/ftp.dante.de/pub/tex/fonts/newtxsf/doc/newtxsf-doc.pdf
+* (just use `stixsans` in matplotlibrc and download `Fira Sans` from Google Fonts to use in matplotlibrc)
