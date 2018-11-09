@@ -77,12 +77,14 @@ make sure you clear fields without linebreaks in between because it will change 
 ### Figure placement problems
 * https://tex.stackexchange.com/questions/37726/problem-with-captions-at-top-of-page-for-tufte-latex
 * https://tex.stackexchange.com/questions/48140/what-shell-commands-are-executed-by-lyx-view-menus
+* solution: https://tex.stackexchange.com/questions/37726/problem-with-captions-at-top-of-page-for-tufte-latex
 
 ### Protected references are necessary
 * https://tex.stackexchange.com/questions/191043/error-using-ref-in-captions-with-tufte-and-babel
 
 ### Margin figures have to be adjusted manually
 * https://groups.google.com/forum/#!topic/tufte-latex/s5ySzb9fF50
+* or maybe not? https://tex.stackexchange.com/questions/354510/tufte-marginfigure-caption-is-outside-the-page
 
 ### Figures with Sans-Serif fonts
 * ftp://ftp.mpi-sb.mpg.de/pub/tex/mirror/ftp.dante.de/pub/tex/fonts/newtxsf/doc/newtxsf-doc.pdf
